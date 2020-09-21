@@ -4,7 +4,7 @@ let tabla = document.getElementById('tabla')
 let dnis = document.getElementsByName('id')
 let flag = false
 
-function nuevoEmp(){
+const nuevoEmp = () =>{
     let nombre = prompt('Introduzca nombre:')
     let dni = prompt('Introduzca DNI')
     let apellidos = prompt('Introduzca apellidos')
@@ -26,10 +26,8 @@ function nuevoEmp(){
    for(let i = 0; i<dnis.length; i++){
        if(dnis[i].textContent == dni){
            alert('YA EXISTE')
-           flag = true;
-       }
-   }
-   if(flag != true){
+           
+       }else {
     newpos.appendChild(postext)
     newdni.appendChild(dnitext)
     newnom.appendChild(nomtext)
@@ -43,12 +41,14 @@ function nuevoEmp(){
     tabla.appendChild(newRow)
    }
 }
-   function borrarEmp(){
+}
+   const borrarEmp = () => {
        let dniborrar = prompt('Introduzca DNi de quien quiera borrar.')
-       for(let i = 0; i<dnis.length; i++){
+       for(let i = 0; i< dnis.length ; i++){
         if(dnis[i].textContent == dniborrar){
-            dnis[i].parentNode.remove;
+            tabla.deleteRow(i + 1)
         }
     }
 
-   }
+}
+
