@@ -10,3 +10,16 @@
     background-color: green;
 }
 
+div.gallery {
+    width: 200px;
+    
+}
+
+div.gallery_item{
+    float: left;
+    border: 1px solid crimson;
+    width: 30%;
+    margin: 2px;
+    text-align: center;
+}
+
