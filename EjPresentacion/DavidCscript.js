@@ -3,6 +3,17 @@ let caja = document.getElementById('box')
 let input = document.getElementById('tex')
 
 
+/*
+caja.addEventListener('mouseenter', (e) =>{
+    e.preventDefault()
+    caja.classList.replace('caja', 'green');
+})
+*/
+
+caja.addEventListener('mouseenter', () =>{
+    
+})
+
 caja.addEventListener('mousedown', () => {
     console.log('Has pulsado la caja.')
 })
