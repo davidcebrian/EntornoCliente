@@ -22,5 +22,11 @@ div.gallery_item{
     width: 29%;
     margin: 2px;
     text-align: center;
+    color: indigo;
+    -moz-user-select: none;
+}
+
+.orange{
+    background-color: orangered;
 }
 

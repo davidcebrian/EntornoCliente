@@ -45,4 +45,11 @@ let gallery = document.getElementById('gallery')
 
 gallery.addEventListener('click', (e) => {
     console.log(e.target.textContent)
+    if(e.target.className == 'gallery_item orange'){
+         e.target.classList.remove('orange')
+    }else{
+        e.target.classList.add('orange')
+    }
+        
+
 })
