@@ -16,9 +16,10 @@ div.gallery {
 }
 
 div.gallery_item{
+    border-radius: 999px;
     float: left;
-    border: 1px solid crimson;
-    width: 30%;
+    border: 2px solid indigo;
+    width: 29%;
     margin: 2px;
     text-align: center;
 }
