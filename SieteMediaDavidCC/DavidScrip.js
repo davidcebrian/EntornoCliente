@@ -114,7 +114,4 @@ plantarbtn.addEventListener('click', plantarse = (e) => {
         document.getElementById('popi').classList.replace('popupi', 'popupib')
     }
     })
-
-    //Realizamos la opción reiniciar
-    let reinibtn = document.getElementById('reiniciar')
     
