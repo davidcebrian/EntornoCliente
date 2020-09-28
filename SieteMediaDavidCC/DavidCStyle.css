@@ -26,6 +26,15 @@ body {
 .cards_image img{
     visibility: hidden;
 }
+.cards_imagev img{
+    border: 1px solid red;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 170px;
+    height: 251px;
+    visibility: visible;
+}
 
 .ia{
     position: absolute;
@@ -36,6 +45,11 @@ body {
     border: 1px solid whitesmoke;
 }
 
+.ia img{
+    float: right;
+    width: 90px;
+    height: 135px;
+}
 .textoia{
     color: white;
     text-align: center;
@@ -52,7 +66,12 @@ body {
     top: 79%;
     width: 47%;
     height: 19%;
+}
 
+.user img{
+    float: left;
+    width: 90px;
+    height: 135px;
 }
 
 .textouser{
@@ -113,6 +132,7 @@ body {
     left: 16%;
     top: 47%;
     height: 80px;
+    z-index: 300;
 }
 #reiniciar:hover{
     border:2px solid black;
@@ -125,3 +145,74 @@ body {
     height: 80px;
 }
 
+.blockers{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;   
+    z-index: -50;
+}
+.popup{
+    text-align: center;
+    color: blanchedalmond;
+    border: 2px solid red;
+    border-radius: 20px;
+    position: absolute;
+    top: 31%;
+    left: 23%;
+    height:40%;
+    width:40%;
+    background-color: red;   
+    z-index: 100;
+    display: none;
+}
+.popupb{
+    text-align: center;
+    color: blanchedalmond;
+    border: 2px solid red;
+    border-radius: 20px;
+    position: absolute;
+    top: 31%;
+    left: 23%;
+    height:40%;
+    width:40%;
+    background-color: red;   
+    z-index: 100;
+}
+
+.popupi{
+    text-align: center;
+    color: blanchedalmond;
+    border: 2px solid red;
+    border-radius: 20px;
+    position: absolute;
+    top: 31%;
+    left: 23%;
+    height:40%;
+    width:40%;
+    background-color: red;   
+    z-index: 100;
+    display: none;
+}
+.popupib{
+    text-align: center;
+    color: blanchedalmond;
+    border: 2px solid red;
+    border-radius: 20px;
+    position: absolute;
+    top: 31%;
+    left: 23%;
+    height:40%;
+    width:40%;
+    background-color: red;   
+    z-index: 100;
+}
+.blocker{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;   
+    z-index: 50;  
+}

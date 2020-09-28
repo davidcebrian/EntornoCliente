@@ -15,7 +15,7 @@
         <img src="" alt="throwed" width="170px" id='cartaarriba'> 
     </div>
    
-    <div class= 'ia'>
+    <div class= 'ia' id='ia'>
 
     </div>
     <div class='textoia'>
@@ -23,17 +23,30 @@
         <input disabled="disabled" type="text" name="puntosia" id="puntosia">
     </div>
 
-    <div class= 'user'>
+    <div class= 'user' id='user'>
         
     </div>
     <div class='textouser'>
         <strong>PUNTOS JUGADOR:</strong>
         <input disabled="disabled" type="text" name="puntosuser" id="puntosuser">
     </div>
+    <div class = 'blockers' id='block'>
+
+    </div>
+    <div class = 'popup' id='pop'>
+        <h1>GANA LA IA!!</h1>
+        <h2>Haz click en reiniciar</h2><br>
+        <h2>para volver a jugar!</h2>
+    </div>
+    <div class = 'popupi' id='popi'>
+        <h1>GANA EL JUGADOR!!</h1>
+        <h2>Haz click en reiniciar</h2><br>
+        <h2>para volver a jugar!</h2>
+    </div>
 
     <input type="button" value="PEDIR" id='pedir'>
     <input type="button" value="PLANTARSE" id='plantar'>
-    <input type="button" value="REINICIAR" id='reiniciar'>
+    <input type="button" value="REINICIAR" id='reiniciar' onclick="location.reload()">
     <script src="DavidScrip.js"></script>
 </body>
 </html>
