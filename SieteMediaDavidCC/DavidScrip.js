@@ -80,33 +80,35 @@ plantarbtn.addEventListener('click', plantarse = (e) => {
     el jugador.
     */
    e.preventDefault()
+   
    do{
-       do{
-           num = parseInt(Math.random()*10)
-           let palo = parseInt(Math.random()*4)
-           carta = (num+1)+baraja[num][palo]
-           console.log(carta);
-        }while(norepetir.indexOf(carta) > -1)
-        cartaarriba.setAttribute('src', 'imagenes/'+carta+'.jpg')
-        divimg.classList.replace('cards_image', 'cards_imagev')
-        //La mostramos en el lugar de la ia
-        let img = document.createElement('img')
-        img.setAttribute('src', 'imagenes/'+carta+'.jpg')
-        ia.appendChild(img)
-        norepetir.push(carta);
-        /*
-        Apuntamos los puntos y los vamos sumando, 
-        si nos pasamos de 7.5 gana Jugador
-        */
-       if((num+1) < 8){
-           puntosi = puntosi + (num+1)
-           puntosia.value = puntosi
-        }else{
-            puntosi = puntosi + 0.5
+        do{
+            num = parseInt(Math.random()*10)
+            let palo = parseInt(Math.random()*4)
+            carta = (num+1)+baraja[num][palo]
+            console.log(carta);
+         }while(norepetir.indexOf(carta) > -1)
+         cartaarriba.setAttribute('src', 'imagenes/'+carta+'.jpg')
+         divimg.classList.replace('cards_image', 'cards_imagev')
+         //La mostramos en el lugar de la ia
+         let img = document.createElement('img')
+         img.setAttribute('src', 'imagenes/'+carta+'.jpg')
+         ia.appendChild(img)
+         norepetir.push(carta);
+         /*
+         Apuntamos los puntos y los vamos sumando, 
+         si nos pasamos de 7.5 gana Jugador
+         */
+        if((num+1) < 8){
+            puntosi = puntosi + (num+1)
             puntosia.value = puntosi
-        }
+         }else{
+             puntosi = puntosi + 0.5
+             puntosia.value = puntosi
+         }
     }while(puntosi < puntosu && puntosi < 7.5)
-    if(puntosi >= puntosu && puntosi < 7.5){
+
+    if(puntosi >= puntosu && puntosi <= 7.5){
         document.getElementById('block').classList.replace('blockers', 'blocker')
         document.getElementById('pop').classList.replace('popup', 'popupb')
     }else{

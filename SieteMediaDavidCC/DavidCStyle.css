@@ -7,7 +7,7 @@ body {
 }
 
 .cards{
-    border: 1px solid red;
+    
     position: absolute;
     top: 35%;
     left: 25%;
@@ -16,7 +16,7 @@ body {
 }
 
 .cards_image{
-    border: 1px solid red;
+    
     position: absolute;
     top: 35%;
     left: 50%;
@@ -27,7 +27,7 @@ body {
     visibility: hidden;
 }
 .cards_imagev img{
-    border: 1px solid red;
+    
     position: absolute;
     top: 35%;
     left: 50%;
@@ -42,7 +42,7 @@ body {
     top: 6%;
     width: 47%;
     height: 19%;
-    border: 1px solid whitesmoke;
+    
 }
 
 .ia img{
@@ -60,7 +60,7 @@ body {
 }
 
 .user{
-    border: 1px solid whitesmoke;
+    
     position: absolute;
     left: 20%;
     top: 79%;
@@ -156,7 +156,7 @@ body {
 .popup{
     text-align: center;
     color: blanchedalmond;
-    border: 2px solid red;
+    border: 2px solid maroon;
     border-radius: 20px;
     position: absolute;
     top: 31%;
@@ -170,7 +170,7 @@ body {
 .popupb{
     text-align: center;
     color: blanchedalmond;
-    border: 2px solid red;
+    border: 2px solid maroon;
     border-radius: 20px;
     position: absolute;
     top: 31%;
@@ -184,28 +184,28 @@ body {
 .popupi{
     text-align: center;
     color: blanchedalmond;
-    border: 2px solid red;
+    border: 2px solid black;
     border-radius: 20px;
     position: absolute;
     top: 31%;
     left: 23%;
     height:40%;
     width:40%;
-    background-color: red;   
+    background-color: green;   
     z-index: 100;
     display: none;
 }
 .popupib{
     text-align: center;
-    color: blanchedalmond;
-    border: 2px solid red;
+    color: black;
+    border: 2px solid darkgreen;
     border-radius: 20px;
     position: absolute;
     top: 31%;
     left: 23%;
     height:40%;
     width:40%;
-    background-color: red;   
+    background-color: green;   
     z-index: 100;
 }
 .blocker{
