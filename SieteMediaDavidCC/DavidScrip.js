@@ -34,7 +34,6 @@ pedir.addEventListener('click', sacar = (e) =>{
     Creamos un String de una de las cartas en img
     creando numeros al azar y sacando la carta de la baraja creada.
     (si sale una repetida se repite el proceso hasta que no lo sea)
-    La mostramos y la metemos en el array de repetidas.
     */
     do{
         e.preventDefault()
@@ -43,9 +42,10 @@ pedir.addEventListener('click', sacar = (e) =>{
         carta = (num+1)+baraja[num][palo]
         console.log(carta);
     }while(norepetir.indexOf(carta) > -1)
+    //Mostramos la carta bocaarriba en su lugar.
     cartaarriba.setAttribute('src', 'imagenes/'+carta+'.jpg')
     divimg.classList.replace('cards_image', 'cards_imagev')
-    //La mostramos en el lugar del user
+    //La mostramos en el lugar del user y la metemos en el array de repetidas.
     let img = document.createElement('img')
     img.setAttribute('src', 'imagenes/'+carta+'.jpg')
     user.appendChild(img)
@@ -72,12 +72,8 @@ pedir.addEventListener('click', sacar = (e) =>{
 let plantarbtn = document.getElementById('plantar')
 plantarbtn.addEventListener('click', plantarse = (e) => {
     /*
-    Creamos un String de una de las cartas en img
-    creando numeros al azar y sacando la carta de la baraja creada.
+    Creamos numeros al azar y sacando la carta de la baraja creada.
     (si sale una repetida se repite el proceso hasta que no lo sea)
-    La mostramos y la metemos en el array de repetidas.
-    Repetimos el proceso siempre que la ia tenga menos puntos que 
-    el jugador.
     */
     do{
         num = parseInt(Math.random()*10)
@@ -85,16 +81,17 @@ plantarbtn.addEventListener('click', plantarse = (e) => {
         carta = (num+1)+baraja[num][palo]
         console.log(carta);
     }while(norepetir.indexOf(carta) > -1)
+    //Mostramos la carta boca arriba
     cartaarriba.setAttribute('src', 'imagenes/'+carta+'.jpg')
     divimg.classList.replace('cards_image', 'cards_imagev')
     //La mostramos en el lugar de la ia
     let img = document.createElement('img')
     img.setAttribute('src', 'imagenes/'+carta+'.jpg')
     ia.appendChild(img)
+    //añadimos la carta al array de repetidas
     norepetir.push(carta);
     /*
-    Apuntamos los puntos y los vamos sumando, 
-    si nos pasamos de 7.5 gana Jugador
+    Apuntamos los puntos y los vamos sumando
     */
     if((num+1) < 8){
         puntosi = puntosi + (num+1)
@@ -103,11 +100,11 @@ plantarbtn.addEventListener('click', plantarse = (e) => {
         puntosi = puntosi + 0.5
         puntosia.value = puntosi
     }
-
+    //Repetimos el proceso siempre que la ia tenga menos puntos que el jugador.
     if(puntosi < puntosu){
             setTimeout(plantarse,1000)
     }
-
+    //Comprobamos quien ha ganado y mostramos su correspondiente popup.
     else if(puntosi >= puntosu && puntosi <= 7.5){
         document.getElementById('block').classList.replace('blockers', 'blocker')
         document.getElementById('pop').classList.replace('popup', 'popupb')
