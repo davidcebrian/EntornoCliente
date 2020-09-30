@@ -106,11 +106,16 @@ plantarbtn.addEventListener('click', plantarse = (e) => {
     }
     //Comprobamos quien ha ganado y mostramos su correspondiente popup.
     else if(puntosi >= puntosu && puntosi <= 7.5){
-        document.getElementById('block').classList.replace('blockers', 'blocker')
-        document.getElementById('pop').classList.replace('popup', 'popupb')
+        const timeout = setTimeout(() =>{
+            document.getElementById('block').classList.replace('blockers', 'blocker')
+            document.getElementById('pop').classList.replace('popup', 'popupb')
+        },1500)
+        
     }else{
-        document.getElementById('block').classList.replace('blockers', 'blocker')
-        document.getElementById('popi').classList.replace('popupi', 'popupib')
+        const timeout = setTimeout(() => {
+            document.getElementById('block').classList.replace('blockers', 'blocker')
+            document.getElementById('popi').classList.replace('popupi', 'popupib')
+        }, 1500)
     }
     })
     
