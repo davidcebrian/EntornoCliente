@@ -1,24 +1,21 @@
 let alarm = document.getElementById('alarm')
-    let fecha = new Date()
-const mostrarhora = () => {
-    alarm.textContent = ('Son las: '+fecha.getHours()+':'+fecha.getMinutes())
-    console.log('Son las: '+fecha.getHours()+':'+fecha.getMinutes())
-}
 
 
 const alarma = () => {
-    let hora = parseInt(prompt('A que hora desea que suene la alarma.'))
-        let minuto = parseInt(prompt('A que minuto:'))
+    let flag = true;
+    let fecha = new Date()
+    alarm.innerHTML = ('Son las: '+fecha.getHours()+':'+fecha.getMinutes())
     
-        if(hora == parseInt(fecha.getHours()) && minuto == parseInt(fecha.getMinutes())){
+    if(fecha.getHours()==document.getElementById("hora").value && fecha.getMinutes()==document.getElementById("min").value && flag){
+        flag = false;
         alert('¿DESEA DESCANSAR UN POCO MAS?')
         setTimeout(() => {
             alert('DESPIERTA!!')
-        }, 120000)
+        }, 2000)
+        
     }
-    
 }
 setInterval(alarma,1000)
-setInterval(mostrarhora, 1000)
+
 
 
