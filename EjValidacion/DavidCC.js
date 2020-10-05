@@ -1,0 +1,12 @@
+let btn = document.getElementById('btn')
+btn.addEventListener('click', (e) => {
+    e.preventDefault()
+    validateDni(document.getElementById('dni').value)
+    validateEmail(document.getElementById('email').value)
+    validateUsername(document.getElementById('user').value)
+    validatePasswordComplex(document.getElementById('password').value)
+    validateCreditCard(document.getElementById('tc').value)
+    validateIban(document.getElementById('cuenta').value)
+    validateUrl(document.getElementById('url').value)
+    validateIP(document.getElementById('ip').value)
+})
