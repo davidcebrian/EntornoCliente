@@ -1,4 +1,5 @@
 const btn = document.getElementById("btn");
+let lista = document.getElementById("lista")
 btn.addEventListener('click', () => {
     let xhr
     if(window.XMLHttpRequest) xhr = new XMLHttpRequest()
@@ -7,11 +8,17 @@ btn.addEventListener('click', () => {
     xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
 
     xhr.addEventListener('load', (data) => {
-        console.log(JSON.parse(data.target.response))
-        
+        let json = JSON.parse(data.target.response)
+        console.log(json)
+        for(user of json){
+            console.log(`${user.id} - ${user.name}`)
+            let fila = document.createElement('li')
+            fila.textContent = `${user.id} - ${user.name}`;
+            lista.appendChild(fila);
+        }
     })
-
-    let lista = document.createElement("ul")
+    lista.innerHTML;
     
+
     xhr.send()
 })
