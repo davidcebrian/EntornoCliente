@@ -16,5 +16,8 @@ let usuarios = [{
 ]
 
 const getUser = (id, cb) =>{
-    
+    let usuario = usuarios.find(user => user.id == id);
+    if (!user) cb(`Not exist a user with id ${id}`)
+    else cb(null, user)
 }
+
