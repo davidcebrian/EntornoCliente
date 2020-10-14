@@ -1,5 +1,6 @@
 const btn = document.getElementById("btn");
 let lista = document.getElementById("lista")
+//SIN FETCH
 btn.addEventListener('click', () => {
     let xhr
     if(window.XMLHttpRequest) xhr = new XMLHttpRequest()
@@ -23,6 +24,7 @@ btn.addEventListener('click', () => {
     xhr.send()
 })
 
+//CON FETCH
 const btnf = document.getElementById("btnf")
 btnf.addEventListener('click', () => {
     fetch('https://jsonplaceholder.typicode.com/users')
