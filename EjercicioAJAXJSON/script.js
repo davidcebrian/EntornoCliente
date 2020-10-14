@@ -20,7 +20,6 @@ btn.addEventListener('click', () => {
     })
     lista.innerHTML;
     
-
     xhr.send()
 })
 
