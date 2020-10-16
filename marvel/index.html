@@ -12,19 +12,21 @@
     <h1>AJAX II</h1>
     <br>
     <select id="heroes" name="heroes">
+        <option></option>
     </select> 
-    <button type="submit" id="getData"> GET DATA</button>
+    <button type="submit" id="getData" onclick="getData(select.value)"> GET DATA</button>
     <br><br>
     <table id="tabla">
-        <td>
-        <th>NAME</th>
-        </td>
-        <td>
-        <th>GENDER</th>
-        </td>
-        <td>
-        <th>FIGHTING SKILLS</th>
-        </td>
+        <tr>
+            <th>NAME</th>
+            <th>GENDER</th>
+            <th>FIGHTING SKILLS</th>
+        </tr>
+        <tr id='reemplazar'>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
     </table>
 </body>
 <script src="script.js"></script>
