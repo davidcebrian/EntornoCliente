@@ -1,0 +1,19 @@
+table{
+    border-collapse: collapse;
+    width: 500px;
+    text-align: center;
+}
+
+table th, td, tr {
+    padding: 3px;
+    width: 20%;
+}
+
+table th {
+    background-color: lightslategray;
+    background-color: rgba(0,0,0,0.4);
+}
+
+table td{
+    background-color: rgba(0,0,0,0.2);
+}

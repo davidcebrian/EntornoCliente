@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body id='body'>
+    <h1>AJAX II</h1>
+    <br>
+    <select id="heroes" name="heroes">
+    </select> 
+    <button type="submit" id="getData" onclick="getData(select.value)"> GET DATA</button>
+    <br><br>
+    <select name="alig" id="alig"></select>
+    <input type="button" value="FILTER" id="filter">
+    <br><br>
+    <table id="tabla">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>ALIGNMENT</th>
+                <th>GENDER</th>
+                <th>HOMETOWN</th>
+                <th>FIGHTING SKILLS</th>
+            </tr>
+        </thead>
+        <tbody id='tbody'>
+            <tr id='reemplazar' name='borrar'>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+        
+    </table>
+</body>
+<script src="script.js"></script>
+</html>
