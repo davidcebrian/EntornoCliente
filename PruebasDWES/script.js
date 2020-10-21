@@ -69,7 +69,8 @@ let lista = document.getElementById('list')
 let listbtn = document.getElementById('btnlista')
 
 /**Hacemos una petición get de todos los usuarios a nuestro endpoint
- * al clickar en el boton LISTAR
+ * al clickar en el boton LISTAR y cambiamos la lista que tenemos
+ * por una nueva y le añadimos todos los elementos
  */
 listbtn.addEventListener('click', (e) => {
     let ulvacio = document.createElement('ul')
