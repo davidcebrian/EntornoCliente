@@ -65,7 +65,7 @@ buttonGet.addEventListener('click', (e) => {
 /**Cogemos el elemento lista para añadirle mas tarde 
  * los elementos a mostrar y el boton para listar los elementos.
  */
-let lista = document.getElementById('list')
+
 let listbtn = document.getElementById('btnlista')
 
 /**Hacemos una petición get de todos los usuarios a nuestro endpoint
@@ -73,6 +73,7 @@ let listbtn = document.getElementById('btnlista')
  * por una nueva y le añadimos todos los elementos
  */
 listbtn.addEventListener('click', (e) => {
+    let lista = document.getElementById('list')
     let ulvacio = document.createElement('ul')
     ulvacio.setAttribute('id', 'list')
     lista.replaceWith(ulvacio)
