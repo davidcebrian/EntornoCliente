@@ -42,6 +42,14 @@ button.addEventListener('click', (e) => {
         .then(res => {
             console.log(res)
         })
+        .catch(error => {
+            if(error.status == 404){
+                alert('Rellene los campos necesarios.')
+            }else {
+                alert('ERROR INESPERADO:')
+            }
+        })
+
 })
 /**Hacemos la petición GET a nuestro endpoint y los datos recibidos 
 los mostramos en el formulario.
@@ -58,8 +66,14 @@ buttonGet.addEventListener('click', (e) => {
             userName.value = res.userNamer
             mobileNumber.value = res.mobileNumber
             mail.value = res.mail
-        }
-        )
+        })
+        .catch(error => {
+            if(error.status == 404){
+                alert('No existe el usuario')
+            }else {
+                alert('ERROR INESPERADO:')
+            }
+        })
 })
 
 /**Cogemos el elemento lista para añadirle mas tarde 
@@ -86,6 +100,13 @@ listbtn.addEventListener('click', (e) => {
             let text = document.createTextNode(`ID: ${user.id}` + ' - '+`${user.name}`)
             elem.appendChild(text)
             ulvacio.appendChild(elem)
+        }
+    })
+    .catch(error => {
+        if(error.status == 404){
+            alert('No existen usuarios')
+        }else {
+            alert('ERROR INESPERADO:')
         }
     })
 })
