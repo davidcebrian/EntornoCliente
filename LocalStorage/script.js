@@ -7,10 +7,10 @@ let input = document.getElementById('key');
 let inputval = document.getElementById('value');
 
 /* botón guardar, guarda la clave y valor en 
-    session storage */
+    local storage */
 btnSave.addEventListener('click', (e) => {
     e.preventDefault();
-    sessionStorage.setItem(form.key.value, form.value.value);
+    localStorage.setItem(form.key.value, form.value.value);
 })
 
 /* botón buscar, busca el valor de la key introducida
@@ -18,10 +18,10 @@ btnSave.addEventListener('click', (e) => {
     alerta */
 btnSelect.addEventListener('click', (e) => {
     e.preventDefault();
-    if (sessionStorage.getItem(input.value) == null) {
+    if (localStorage.getItem(input.value) == null) {
         alert('no existe esa clave.')
     } else {
-        inputval.value = sessionStorage.getItem(input.value)
+        inputval.value = localStorage.getItem(input.value)
     }
 })
 
@@ -29,10 +29,10 @@ btnSelect.addEventListener('click', (e) => {
     y la borra, si no existe muestra alerta. */
 btnBorrar.addEventListener('click', (e) => {
     e.preventDefault();
-    if (sessionStorage.getItem(input.value) == null) {
+    if (localStorage.getItem(input.value) == null) {
         alert('No existe esa clave.')
     } else {
-        sessionStorage.removeItem(input.value);
+        localStorage.removeItem(input.value);
     }
 })
 
@@ -40,9 +40,9 @@ btnBorrar.addEventListener('click', (e) => {
     hay datos muestra alerta. */
 btnClear.addEventListener('click', (e) => {
     e.preventDefault();
-    if (sessionStorage.length == 0) {
+    if (localStorage.length == 0) {
         alert('No hay objetos que borrar.')
     } else {
-        sessionStorage.clear();
+        localStorage.clear();
     }
 })
